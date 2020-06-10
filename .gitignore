@@ -1,4 +1,5 @@
 # Byte-compiled / optimized / DLL files
+!Todo_list.exe
 __pycache__/
 *.py[cod]
 *$py.class
