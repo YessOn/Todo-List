@@ -1,5 +1,6 @@
 from tkinter import *
 import re
+from camelcase import CamelCase
 
 # Root window
 root = Tk()
@@ -29,7 +30,7 @@ def clear_listbox():
 def add_task():
 	task = text_input.get()
 	if task.strip() != "":
-		tasks.append(task.capitalize())
+		tasks.append(CamelCase().hump(task))
 		update_listbox()
 	else:
 		display_n_of_tasks["text"] = "Please enter a task!"
